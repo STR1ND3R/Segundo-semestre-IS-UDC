@@ -1,0 +1,23 @@
+1. Convertir millas náuticas a metros (1 milla náutica es igual a 1852 m)
+
+2. Pedir el precio de un artículo en pesos y el descuento en porcentaje (%); calcular el monto
+del descuento en pesos
+
+3. Pedir el precio de un artículo y el precio con descuento; mostrar el porcentaje (%) de
+descuento correspondiente.
+
+4. Pedir 2 números y mostrar en pantalla el resultado de la suma, resta, multiplicación y
+división entre ellos.
+
+5. Calcular el volumen de una esfera.
+
+6. Convertir de pulgadas a centímetros (1” es igual a 2.54 cm)
+
+7. Pedir una cantidad de segundos, mostrar como resultado a cuantas horas, minutos y
+segundos equivale (4000 segundos = 1 hrs 6 minutos 40 segundos)
+
+8. Calcular el volumen de un cilindro.
+
+9. Calcular el volumen de un cono.
+
+10. Calcular el volumen de un cubo.
