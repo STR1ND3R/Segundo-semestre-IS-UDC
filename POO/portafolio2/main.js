@@ -20,7 +20,25 @@ function e4(){
     $('n14')%2 == 0 && $('n24')%2 == 0 ? xd('n34', 'Si') : xd('n34', 'No')
 }
 function e5(){
-
+    h = parseInt($('n15'))
+    m = parseInt($('n25'))
+    s = parseInt($('n35'))
+    s = s + 1
+    alert(s)
+    if (s == 60){
+        m++
+        s = 0
+    }
+    if (m == 60){
+        h++
+        m = 0
+    }
+    if (h == 24){
+        h = 0
+    }
+    alert(h,m,s)
+    xd('n45', h+ ':' + m + ':' + s)
+    
 }
 function e6(){
     if($('n16') < 0)
