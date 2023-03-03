@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>1. El usuario introduce números (usando prompt) y deja de introducir al introducir un
+            número negativo, mostrar la cantidad de números pares y la cantidad de números impares
+            (sin contar el número negativo).
+        </h3>
+        <button onclick="e1()">Click</button><br>
+
+        <label for="">Cantidad de numeros pares:  <input type="text" readonly id="10"></label><br>
+
+        <label for="">Cantidad de numeros impares:<input type="text" readonly id="12"></label>
+    </div>
+
+    <div>
+        <h3>2. El usuario introduce N números (usando prompt); cada que introduzca uno se le debe
+            preguntar si desea introducir más (usando confirm). Mostrar el número mayor y menor de
+            todos los que introdujo.
+        </h3>
+        <label for="">Mayor: <input type="text" readonly id="21"></label><br>
+
+        <label for="">Menor: <input type="text" readonly id="22"></label><br>
+    
+
+        <button onclick="e2()">Click</button><br>
+    </div>
+
+    <div>
+        <h3>3. Calcular el sueldo mensual de 10 trabajadores en función de la siguiente información de
+            cada trabajador: La cantidad de horas trabajadas por día, el sueldo por hora, se considera
+            el mes como 30 días. Al final deberá mostrar el monto total de sueldo de los 10
+            trabajadores así como el promedio del sueldo.
+        </h3>
+        <h6>Trabajador1</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht1"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh1"></label>
+        <label for="">Sueldo total: <input type="number" id="st1"readonly></label>
+        <h6>Trabajador2</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht2"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh2"></label>
+        <label for="">Sueldo total: <input type="number" id="st2"readonly></label>
+        <h6>Trabajador3</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht3"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh3"></label>
+        <label for="">Sueldo total: <input type="number" id="st3"readonly></label>
+        <h6>Trabajador4</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht4"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh4"></label>
+        <label for="">Sueldo total: <input type="number" id="st4"readonly></label>
+        <h6>Trabajador5</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht5"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh5"></label>
+        <label for="">Sueldo total: <input type="number" id="st5"readonly></label>
+        <h6>Trabajador6</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht6"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh6"></label>
+        <label for="">Sueldo total: <input type="number" id="st6"readonly></label>
+        <h6>Trabajador7</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht7"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh7"></label>
+        <label for="">Sueldo total: <input type="number" id="st7"readonly></label>
+        <h6>Trabajador8</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht8"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh8"></label>
+        <label for="">Sueldo total: <input type="number" id="st8"readonly></label>
+        <h6>Trabajador9</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht9"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh9"></label>
+        <label for="">Sueldo total: <input type="number" id="st9"readonly></label>
+        <h6>Trabajador10</h6>
+        <label for="">Horas trabajadas: <input type="number" id="ht10"></label>
+        <label for="">Sueldo por hora: <input type="number" id="sh10"></label>
+        <label for="">Sueldo total: <input type="number" id="st10" readonly></label>
+        <br>
+        <label for="">Sueldo promedio mensual: <input type="number" id="pr"></label><br>
+        <button onclick="e3()">Click</button>
+    </div>
+
+    <div>
+        <h3>4. Mostrar en pantalla las tablas de multiplicar del 1 al 10, cada tabla va del 1 al 10.
+
+        </h3>
+
+        <button onclick="e4()">Click</button>
+        <div id="tablas"></div>
+    </div>
+
+    <div>        
+        <h3>5. El usuario va a introducir la edad y el género del N personas (usando prompt), cada que se
+            introduce una persona se le debe preguntar si desea introducir más (usando confirm). Al
+            final debe mostrar la cantidad de Hombres y mujeres mayores y menores de edad.
+        </h3>
+        <h5>Mayores de edad:</h5>
+        <label for="">Hombres:<input type="number" id = '51'readonly></label>
+        <label for="">Mujeres:<input type="number" id = '52'readonly></label>
+
+        <h5>Menores de edad: </h5>
+        <label for="">Hombres:<input type="number" id = '53'readonly></label>
+        <label for="">Mujeres:<input type="number" id = '54'readonly></label>
+
+        <button onclick="e5()">Click</button>
+    </div>
+
+    <div>
+        <h3>6. Mostrar los primeros 100 números pares comenzando en el 2.
+
+        </h3>
+        <p id = '61'></p>
+        <button onclick="e6()">Click</button>
+    </div>
+
+    <div>
+        <h3>7. Pedir al usuario un número e indicarle si es divisible entre 7, 5, 3 y 2. Ejemplo: 28 es
+            divisible entre 7 y 2.
+        </h3>
+        <label for="">Numero: <input type="number" id  = '71'></label>
+        <label for="">Es divisible entre: <input type="text" id  = '72'></label>
+        <button onclick="e7()">Click</button>
+    </div>
+
+    <div>
+        <h3>8. Pedirle al usuario un número y mostrarle la suma de todos los números desde 1 hasta el
+            número que introdujo. Ejemplo: 7 la suma es 28.
+        </h3>
+        <label for="">Numero: <input type="number" id="81"></label>
+        <label for="">Suma: <input type="number" id="82"></label>
+        <button onclick="e8()">Click</button>
+    </div>
+    
+</body>
+</html>
