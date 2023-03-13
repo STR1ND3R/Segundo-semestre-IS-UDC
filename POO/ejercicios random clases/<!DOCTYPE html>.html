@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">inicio<input type="number" name="" id="inicio"></label>
+    <label for="">final<input type="number" name="" id="final"></label>
+    <label for="">incremento<input type="number" name="" id="incremento"></label>
+    <div id = 'res'></div>
+    <button onclick="xd()">dvdfcas</button>
+
+    <script>
+        function xd(){
+            if(parseFloat(document.getElementById('inicio').value) < parseFloat(document.getElementById('final').value)){
+                for(i=parseFloat(document.getElementById('inicio').value);i<= parseFloat(document.getElementById('final').value); i+=parseFloat(document.getElementById('incremento').value)){
+                    document.getElementById('res').innerText += i
+                }
+
+            }
+
+            if(parseFloat(document.getElementById('inicio').value) > parseFloat(document.getElementById('final').value)){
+                for(i=parseFloat(document.getElementById('inicio').value);i<= parseFloat(document.getElementById('final').value); i-=parseFloat(document.getElementById('incremento').value)){
+                    document.getElementById('res').innerText += i
+                }
+
+            }
+
+        }
+        
+    </script>
+</body>
+</html>

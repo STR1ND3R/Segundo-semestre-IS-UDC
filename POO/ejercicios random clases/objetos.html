@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            nombre:'José Alberto',
+            apellidos:'Fernández',
+            genero:'Masculino',
+            fecha_de_nacimiento:{
+                dia:6,
+                mes:5,
+                ano:2004
+
+            },
+            edad: function (){
+                let dh = 10
+                let mh  = 4
+                let ah = 2023
+                let edad = ah-this.fecha_de_nacimiento.ano
+
+                if(dh>=this.fecha_de_nacimiento.dia || mh >= this.fecha_de_nacimiento.mes){
+                    return edad+1
+                }
+                else{
+                    return edad
+                }
+
+
+            }
+
+        }
+        alert(obj.edad)
+    </script>
+</body>
+</html>
