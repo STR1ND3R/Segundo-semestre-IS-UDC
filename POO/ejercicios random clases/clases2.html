@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Persona{
+            constructor(nombre, apellido){
+                this.nombre=nombre;
+                this.apellido=apellido;
+            }
+            nombreCompleto(){
+                return this.nombre + " " + this.apellido;
+            }
+        }
+
+        class Alumno extends Persona{
+            constructor(nombre,apellido,noCuenta){
+                super(nombre, apellido)
+                this.noCuenta = noCuenta
+            }
+        }
+
+        let a = new Persona("aaaa", "bbbbbb")
+        document.write(a.nombre)
+        document.write(a.apellido)
+        document.write(a.nombreCompleto())
+        
+    </script>
+</body>
+</html>
