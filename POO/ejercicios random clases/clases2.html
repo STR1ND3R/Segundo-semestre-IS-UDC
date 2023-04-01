@@ -8,20 +8,26 @@
 </head>
 <body>
     <script>
-        class Persona{
-            constructor(nombre, apellido){
-                this.nombre=nombre;
-                this.apellido=apellido;
+        class Coche{
+            constructor(potencia, velocidad, aceleracion){
+                this.potencia=potencia;
+                this.velocidad=velocidad;
+                this.aceleracion=aceleracion;
             }
-            nombreCompleto(){
-                return this.nombre + " " + this.apellido;
-            }
+
         }
 
-        class Alumno extends Persona{
-            constructor(nombre,apellido,noCuenta){
-                super(nombre, apellido)
-                this.noCuenta = noCuenta
+        class CocheDeCarreras extends Coche{
+            #_cargaAerodinamica = 0
+            constructor(potencia, velocidad, aceleracion, cargaAerodinamica){
+                super(potencia, velocidad, aceleracion);
+                this.#_cargaAerodinamica = cargaAerodinamica;
+            }
+            get cargaAerodinamica(){
+                return this.#_cargaAerodinamica.toString() + 'HP';
+            }
+            set cargaAerodinamica(value){
+                this.#_cargaAerodinamica=value;
             }
         }
 
