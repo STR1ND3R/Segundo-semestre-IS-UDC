@@ -20,7 +20,7 @@
     </div>
 
     <div>
-        <h3>Ejercicio 2</h3>
+        <h3>Ejercicio 2##</h3>
         <form action=""></form>
         <label for="i21" id="l21">HTML<input type="radio" id="i21" value="HTML"></label>
         <label for="i22" id="l22">JavaScript<input type="radio" id="i22" value="JavaScript"></label>
@@ -60,7 +60,7 @@
     <div>
         <h3>Ejercicio 4</h3>
         <div style="border-style: solid; border-color: black; border-width: 3px; height: 400px; width: 400px;">
-            <div id = 'pelota' style="width: 25px; height: 25px; background-color: green; margin: 0px 375px 375px 0px;">
+            <div id = 'pelota' style="width: 25px; height: 25px; background-color: green; position: relative; left: 0px; top: 0px">
 
             </div>
         </div>
@@ -70,32 +70,99 @@
                 p = document.getElementById('pelota')
 
                 while(true){
+                    if(p.style.left == '0px' && p.style.top == '0px'){
+                        p.style.left = '375px'
+                        break
+                    }
+                    if(p.style.left == '375px' && p.style.top == '0px'){
+                        p.style.top = '375px'
+                        break
+                    }
+                    if(p.style.left == '375px' && p.style.top == '375px'){
+                        p.style.left = '0px'
+                        break
+                    }
+                    if(p.style.left == '0px' && p.style.top == '375px'){
+                        p.style.top = '0px'
+                        break
+                    }
 
-                    if(p.style.margin == '0px 375px 375px 0px'){
-                        p.style.margin = '0px 0px 375px 375px'
-                        break
-                    }
-                    if(p.style.margin == '0px 0px 375px 375px'){
-                        p.style.margin = '375 0px 0px 375px'
-                        break
-                    }
-                    if(p.style.margin == '375 0px 0px 375px'){
-                        p.style.margin = '375px 375px 0px 0px'
-                        break
-                    }
-                    if(p.style.margin == '375px 375px 0px 0px'){
-                        p.style.margin = '0px 375px 375px 0px'
-                        break
-                    }
+
                     
                 }
 
             }
         </script>
     </div>
+
+
+    <div>
+        <h3>Ejercicio 5</h3>
+        <button id = 'b5' style="width: 150px; height: 50px;" onc></button>
+        <script>
+            function e5(){
+                document.getElementById('b5').onmouseover = function (){document.getElementById('b5').style.width = '300px';document.getElementById('b5').style.height = '100px'}
+                document.getElementById('b5').onmouseout = function (){document.getElementById('b5').style.width = '150px';document.getElementById('b5').style.height = '50px'}
+            }
+            e5()
+        </script>
+
+    </div>
+
+    <div id = '6'>
+        <h3>Ejercicio 6</h3>
+        <script>
+            function x(id){
+                document.getElementById(id).previousElementSibling.remove()
+                document.getElementById(id).remove()
+            }
+            function e6(){
+                
+                document.getElementById('6').appendChild(document.createElement('br'))
+                n = parseInt(document.getElementById('6').lastElementChild.previousElementSibling.id.replace('b6', '')) + 1
+                
+                b = document.createElement('button')
+                b.setAttribute('id', ('b6' + n))
+                b.innerText = 'Boton ' + n
+                b.setAttribute('ondblclick', "x(this.id)")
+                
+                document.getElementById('6').appendChild(b)
+                
+            }
+        </script>
+        <button id="b60" onclick="e6()" on>Boton</button>
+
+    </div>
+    
+    <div>
+        <h3>Ejercicio 7</h3>
+        <label for=""><input type="radio" name="opcion" id="o1">Opcion1</label><br>
+        <label for=""><input type="radio" name="opcion" id="o2">Opcion2</label><br>
+        <label for=""><input type="radio" name="opcion" id="o3">Opcion3</label><br>
+        <label for=""><input type="radio" name="opcion" id="o4">Opcion4</label><br>
+        <label for=""><input type="radio" name="opcion" id="o5">Opcion5</label><br>
+
+        <button onclick="e6()">boton</button>
+        <script>
+            function e6(){
+                document.getElementsByName('opcion').forEach(element => {
+                    if(element.checked == true){
+                        element.setAttribute('type', 'checkbox')
+                    }
+                });
+            }
+        </script>
+
+
+
+
+
+    </div>
+
     <div>
         <h3></h3>
     </div>
+
     <div>
         <h3></h3>
     </div>
