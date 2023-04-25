@@ -1,17 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .img{
+      width: 100px;
+      height: 100px;
+    }
+    .cuadro{
+      /*border: 1px solid black;*/
+      border-width: 1px;
+      border-style: solid;
+      border-color: black;
+      border-radius: 10px;
+      padding: 3px;
+      margin: 10px;
+      display: inline-block;
+      width: 45%;
+      height: 200px;
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <p>
-        <img src="" alt="">
-        </p>
-    </div>
-    
+  <div class="cuadro">
+    <p><img class="img" src="img/dq.jpg">th dñhdfgd fjgfd fgfdfjdf gñdfgfuih wh wrdfñl df ´dn</p>
+    <button id="btn1">Aceptar</button>
+  </div><div class="cuadro">
+    <p><img class="img" src="img/John.png">ereg t ryht hghfgh h</p>
+    <button>Aceptar</button>
+  </div>
+  <div class="cuadro">
+    <p><img class="img" src="img/Lasagna.png">ereg t ryht hghfgh h</p>
+    <button>Aceptar</button>
+  </div>
+  <button onclick="probar()">Probar</button>
+  <input onclick="borrar()" id="btnR" type="button" value="boton raro">
+  <script>
+    function borrar(){
+      //document.lastChild.removeChild(document.lastChild.lastChild);
+      let divs=document.getElementsByClassName("cuadro");
+      document.lastChild.lastChild.replaceChild(divs[divs.length-1],divs[0]);
+    }
+    function probar(){
+      /*let o=document.getElementById("btn1");
+      o.innerHTML="Rechazar";*/
+      /*let o= document.getElementsByTagName("img");
+      for(let i=0;i<o.length;i++)
+        o[i].style.width="200px";
+      let o=document.getElementsByClassName("cuadro");
+      for(let i=0;i<o.length;i++){
+        o[i].style.borderColor="red";
+        o[i].style.borderRadius="0px";
+      }
+      document.getElementById("btnR").setAttribute("class","cuadro");
+      document.getElementById("btnR").removeAttribute("class");
+      let o=document.createElement("img");
+      o.src="img/Modelo.png";
+      document.lastChild.appendChild(o);*/
+      let d=document.createElement("div");
+      d.setAttribute("class","cuadro");
+      let p=document.createElement("p");
+      let i=document.createElement("img");
+      i.src="img/Modelo.png";
+      i.setAttribute("class","img");
+      p.innerText="Nueva ficha de información creada a partir de javaScript";
+      p.appendChild(i);
+      d.appendChild(p);
+      let b=document.createElement("button");
+      b.innerText="Aceptar";
+      d.appendChild(b);
+      document.lastChild.lastChild.appendChild(d);
+    }
+  </script>
 </body>
 </html>
