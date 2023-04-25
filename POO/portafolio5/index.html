@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Ejercicio 1</h3>
+        <input type="text" name="" id="i1">
+        <button onclick="e1()">click</button>
+        <p id="p1"></p>
+        <script>
+            function e1(){
+                document.getElementById('p1').innerText = document.getElementById('i1').value
+            }
+        </script>
+    </div>
+
+    <div>
+        <h3>Ejercicio 2</h3>
+        <form action=""></form>
+        <label for="i21" id="l21">HTML<input type="radio" id="i21" value="HTML"></label>
+        <label for="i22" id="l22">JavaScript<input type="radio" id="i22" value="JavaScript"></label>
+        <label for="i23" id="l23">CSS<input type="radio" id="i23" value="CSS"></label>
+        <button>Mostrar</button>
+        <script>
+            function e2(){
+                for (let i =1; i <= 3; i++) {
+                    
+                    
+                }
+                alert()
+            }
+        </script>
+    </div>
+
+    
+    <div>
+        <h3>Ejercicio 3</h3>
+        <label for="alto">Alto<input type="number" id="alto">px</label>
+        <label for="ancho">Ancho<input type="number" id="ancho">px</label>
+        <div id="d3" style="width: 50px; height: 50px; background-color: red; border-color: black; border-width: 1px; border-style: solid;"></div>
+        <button onclick="e3()">Cambiar tamaño</button>
+        <script>
+            function e3(){
+                h = document.getElementById('alto').value
+                w = document.getElementById('ancho').value
+
+                document.getElementById('d3').style.width = w + 'px'
+                document.getElementById('d3').style.height = h + 'px'
+                
+            }
+        </script>
+    </div>
+
+
+    <div>
+        <h3>Ejercicio 4</h3>
+        <div style="border-style: solid; border-color: black; border-width: 3px; height: 400px; width: 400px;">
+            <div id = 'pelota' style="width: 25px; height: 25px; background-color: green; margin: 0px 375px 375px 0px;">
+
+            </div>
+        </div>
+        <button onclick="e4()">Mover</button>
+        <script>
+            function e4(){
+                p = document.getElementById('pelota')
+
+                while(true){
+
+                    if(p.style.margin == '0px 375px 375px 0px'){
+                        p.style.margin = '0px 0px 375px 375px'
+                        break
+                    }
+                    if(p.style.margin == '0px 0px 375px 375px'){
+                        p.style.margin = '375 0px 0px 375px'
+                        break
+                    }
+                    if(p.style.margin == '375 0px 0px 375px'){
+                        p.style.margin = '375px 375px 0px 0px'
+                        break
+                    }
+                    if(p.style.margin == '375px 375px 0px 0px'){
+                        p.style.margin = '0px 375px 375px 0px'
+                        break
+                    }
+                    
+                }
+
+            }
+        </script>
+    </div>
+    <div>
+        <h3></h3>
+    </div>
+    <div>
+        <h3></h3>
+    </div>
+</body>
+</html>
