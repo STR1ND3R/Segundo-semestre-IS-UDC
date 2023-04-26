@@ -22,9 +22,9 @@
     <div>
         <h3>Ejercicio 2##</h3>
         <form action=""></form>
-        <label for="i21"><input type="radio" id="i21" value="HTML">HTML</label><br>
-        <label for="i22"><input type="radio" id="i22" value="JavaScript">JavaScript</label><br>
-        <label for="i23"><input type="radio" id="i23" value="CSS">CSS</label><br>
+        <label for="i21"><input type="radio" id="i21" value="HTML" name="opcion22">HTML</label><br>
+        <label for="i22"><input type="radio" id="i22" value="JavaScript" name="opcion22">JavaScript</label><br>
+        <label for="i23"><input type="radio" id="i23" value="CSS" name="opcion22">CSS</label><br>
         <button onclick="e2()">Mostrar</button>
         <script>
             function e2(){
@@ -163,14 +163,89 @@
 
     <div>
         <h3>Ejercicio 8</h3>
-        <div>
-            <input type="text">
-            <button>Agregar</button>
+        <div id = 'd8'>
+            
+            <label for="">Texto:<input type="text" id="i8"></label>
+            <button onclick="e81()">Agregar</button>
+            <button onclick="e82()">Agregar delante</button>
+            <button onclick="e83()">Agregar detrás</button><br>
+            <script>
+                function e81(){
+                    br = document.createElement('br')
+                    l = document.createElement('label')
+                    a = document.createElement('input')
+                    a.setAttribute('type','radio')
+                    a.setAttribute('name', 'opcion8')
+                    l.appendChild(a)
+                    l.insertAdjacentElement('afterbegin',a)
+                    l.insertAdjacentHTML('beforeend',document.getElementById('i8').value)
+                  
+                    document.getElementById('d8').appendChild(br)
+                    document.getElementById('d8').appendChild(l)
+                    
+                }
+                function e82(){
+                    br = document.createElement('br')
+                    l = document.createElement('label')
+                    a = document.createElement('input')
+                    a.setAttribute('type','radio')
+                    a.setAttribute('name', 'opcion8')
+                    l.appendChild(a)
+                    l.insertAdjacentElement('afterbegin',a)
+                    l.insertAdjacentHTML('beforeend',document.getElementById('i8').value)
+
+                    document.getElementsByName('opcion8').forEach(element => {
+                        if(element.checked == true){
+                            element.parentElement.insertAdjacentElement("afterend", br)
+                            element.parentElement.nextSibling.insertAdjacentElement('afterend', l)
+                        }
+                    });
+                }
+                function e83(){
+                    br = document.createElement('br')
+                    l = document.createElement('label')
+                    a = document.createElement('input')
+                    a.setAttribute('type','radio')
+                    a.setAttribute('name', 'opcion8')
+                    l.appendChild(a)
+                    l.insertAdjacentElement('afterbegin',a)
+                    l.insertAdjacentHTML('beforeend',document.getElementById('i8').value)
+
+                    document.getElementsByName('opcion8').forEach(element => {
+                        if(element.checked == true){
+                            element.parentElement.insertAdjacentElement("beforebegin", l)
+                            element.parentElement.insertAdjacentElement('beforebegin', br)
+                        }
+                    });
+                }
+            </script>
         </div>
     </div>
 
-    <div>
-        <h3></h3>
+    <div id="9">
+        <h3>Ejercicio 9</h3>
+        <button onclick="e9()">Listar elementos</button>
+        <script>
+            function e9(){
+                root = document
+                ul = document.createElement('ul')
+                i = 0
+                while(true){
+                    
+                    root.childNodes.forEach(element => {
+                        li = document.createElement('li')
+                        li.innerText = element.tagName
+                        ul.appendChild(li)
+                        
+                    });
+                
+                    
+                }
+                document.getElementById('9').appendChild(ul)
+
+
+            }
+        </script>
     </div>
 </body>
 </html>
