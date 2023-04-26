@@ -22,17 +22,19 @@
     <div>
         <h3>Ejercicio 2##</h3>
         <form action=""></form>
-        <label for="i21" id="l21">HTML<input type="radio" id="i21" value="HTML"></label>
-        <label for="i22" id="l22">JavaScript<input type="radio" id="i22" value="JavaScript"></label>
-        <label for="i23" id="l23">CSS<input type="radio" id="i23" value="CSS"></label>
-        <button>Mostrar</button>
+        <label for="i21"><input type="radio" id="i21" value="HTML">HTML</label><br>
+        <label for="i22"><input type="radio" id="i22" value="JavaScript">JavaScript</label><br>
+        <label for="i23"><input type="radio" id="i23" value="CSS">CSS</label><br>
+        <button onclick="e2()">Mostrar</button>
         <script>
             function e2(){
                 for (let i =1; i <= 3; i++) {
-                    
+                    if(document.getElementById('i2' + i).checked == true){
+                        alert(document.getElementById('i2' + i).value)
+
+                    }
                     
                 }
-                alert()
             }
         </script>
     </div>
@@ -142,9 +144,9 @@
         <label for=""><input type="radio" name="opcion" id="o4">Opcion4</label><br>
         <label for=""><input type="radio" name="opcion" id="o5">Opcion5</label><br>
 
-        <button onclick="e6()">boton</button>
+        <button onclick="e7()">boton</button>
         <script>
-            function e6(){
+            function e7(){
                 document.getElementsByName('opcion').forEach(element => {
                     if(element.checked == true){
                         element.setAttribute('type', 'checkbox')
@@ -160,7 +162,11 @@
     </div>
 
     <div>
-        <h3></h3>
+        <h3>Ejercicio 8</h3>
+        <div>
+            <input type="text">
+            <button>Agregar</button>
+        </div>
     </div>
 
     <div>
