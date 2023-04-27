@@ -20,7 +20,7 @@
     </div>
 
     <div>
-        <h3>Ejercicio 2##</h3>
+        <h3>Ejercicio 2</h3>
         <form action=""></form>
         <label for="i21"><input type="radio" id="i21" value="HTML" name="opcion22">HTML</label><br>
         <label for="i22"><input type="radio" id="i22" value="JavaScript" name="opcion22">JavaScript</label><br>
@@ -62,7 +62,7 @@
     <div>
         <h3>Ejercicio 4</h3>
         <div style="border-style: solid; border-color: black; border-width: 3px; height: 400px; width: 400px;">
-            <div id = 'pelota' style="width: 25px; height: 25px; background-color: green; position: relative; left: 0px; top: 0px">
+            <div id = 'pelota' style="width: 25px; height: 25px; background-color: green; position: relative; left: 0px; top: 0px ; border-radius: 100%;">
 
             </div>
         </div>
@@ -196,7 +196,7 @@
 
                     document.getElementsByName('opcion8').forEach(element => {
                         if(element.checked == true){
-                            element.parentElement.insertAdjacentElement("afterend", br)
+                            element.parentElement.insertAdjacentElement("afterend", br) 
                             element.parentElement.nextSibling.insertAdjacentElement('afterend', l)
                         }
                     });
@@ -226,23 +226,28 @@
         <h3>Ejercicio 9</h3>
         <button onclick="e9()">Listar elementos</button>
         <script>
-            function e9(){
-                root = document
-                ul = document.createElement('ul')
-                i = 0
-                while(true){
-                    
-                    root.childNodes.forEach(element => {
-                        li = document.createElement('li')
-                        li.innerText = element.tagName
-                        ul.appendChild(li)
-                        
-                    });
-                
-                    
-                }
-                document.getElementById('9').appendChild(ul)
+            function hijos(element){
+                let s = element.nodeName
+                let e = element.childNodes
+                if(e.length > 0){
+                    s+='<ul>'
 
+                    e.forEach(element => {
+                        if(element.nodeType==1){
+                            s+='<li>'
+                            s+= hijos(element)
+                            s+='</li>'
+                        }
+                    });
+                    s+='</ul>'
+                }
+                return s
+            }
+            
+            function e9(){
+                let x = document.createElement('div')
+                x.innerHTML = hijos(document)
+                document.getElementById('9').appendChild(x)
 
             }
         </script>
