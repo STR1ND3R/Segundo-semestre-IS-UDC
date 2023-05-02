@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ejercicio 1 -->
+    <script>
+        function xd(id){
+            return document.getElementById(id)
+        }
+        class CuentaBancaria{
+            #_nombreTitular = ''
+            #_numeroCuenta = 0
+            #_saldo = 0
+            constructor(nombreTitular,numeroCuenta,saldo){
+                this.#_nombreTitular = nombreTitular
+                this.#_numeroCuenta = numeroCuenta
+                this.#_saldo = saldo
+            }
+            get saldo(){
+                return this.#_saldo
+            }
+            get nombreTitular(){
+                return this.#_nombreTitular
+            }
+            get numeroCuenta(){
+                return this.#_numeroCuenta
+            }
+            set nombreTitular(nombreTitular){
+                this.#_nombreTitular = nombreTitular
+            }
+            set numeroCuenta(numeroCuenta){
+                this.#_numeroCuenta = numeroCuenta
+            }
+
+            deposito(valor){
+                this.#_saldo += valor
+
+            }
+            retiro(valor){
+                this.#_saldo -= valor
+
+            }
+            mostrarInformacion(){
+                let info = 'Nombre del titular: ' + this.#_nombreTitular + '\nNumero de cuenta: ' + this.numeroCuenta + '\nSaldo: ' + this.#_saldo
+
+                return 
+            }
+
+
+
+
+            
+        }
+        let cuenta = new CuentaBancaria('yo', 2222, 10000)
+        console.log
+    </script>
+
+    <div>
+        <h3>Agregar cuentas</h3>
+        <label for="">Nombre del titular: <input type="text" id="nombreTitular"></label>
+        <label for="">Numero de cuenta: <input type="number" id="numeroCuenta"></label>
+        <label for="">Saldo: <input type="number" id="saldo"></label>
+        <button onclick="agregar()">agregar</button>
+        <br><br><br>
+        <h3>Agregar nuevaPropiedad</h3>
+        <label for="">Nombre:<input type="text" id="nombre"></label>
+        <label for="">Valor: <input type="text" name="" id="valor"></label>
+        <button onclick="nuevaPropiedad()">Agregar</button>
+
+
+        <h3>Ver cuentas</h3>
+        <button onclick="vista()">Ver</button>
+        <div id="vista"></div>
+    </div>
+
+    <script>
+        // ejercicio 2
+        var cuentas = []
+        function agregar(){
+            nombreTitular = xd('nombreTitular').value
+            numeroCuenta = xd('numeroCuenta').value
+            saldo = xd('saldo').value
+            
+            cuentas.push(new CuentaBancaria(nombreTitular,numeroCuenta,saldo))
+            
+        }
+
+        
+        // ejercicio 4
+        function nuevaPropiedad(){
+            let nombre = xd('nombre').value
+            let valor = xd('valor').value
+
+            cuentas[cuentas.length-1][nombre] = valor
+            
+
+        }
+
+        // ejercicio 5
+        function vista(){
+            cuentas.forEach(element => {
+                let div = document.createElement('div')
+                let p = document.createElement('p')
+                p.innerText = 'Cuenta: \n'
+                p.innerText+= 'Titular: ' + element.nombreTitular + '\n' + 'Numero de cuenta: ' + element.numeroCuenta + '\n' +'Saldo: ' + element.saldo
+                div.appendChild(p)
+                xd('vista').appendChild(div)
+            });
+        }
+
+        </script>
+    <div>
+        <h3>Circulo-cuadrado</h3>
+        <div onclick  = "circulo()" id = 'circulo' style="background-color: red; height: 100px; width: 100px; border-radius: 0%;"></div>
+        <script>
+            function circulo(){
+
+                
+                if(xd('circulo').style.borderRadius == '0%'){
+                    xd('circulo').style = 'background-color: red; height: 100px; width: 100px; border-radius: 50%;'
+                    return 0
+                }
+                if(xd('circulo').style.borderRadius == '50%'){
+                    xd('circulo').style = 'background-color: red; height: 100px; width: 100px; border-radius: 0%;'
+                    return 0
+                }
+
+
+
+
+
+
+
+            }
+        </script>
+    </div>
+
+</body>
+</html>
