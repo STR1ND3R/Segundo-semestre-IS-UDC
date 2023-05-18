@@ -5,7 +5,7 @@ def gui():
     TOP = Tk()
 
 #titulo del metodo
-    titsec = Text(TOP, height=1, width=70, bg='#DDDDDD')
+    titsec = Text(TOP, height=1, width=50, bg='#DDDDDD')
     titsec.insert(INSERT, "Método de la secante para segundo grado:")
     titsec.grid(row=0, column=0)
 #coeficiente a
@@ -146,7 +146,7 @@ def gui():
 
 
 #sacando los valores y calculando
-    def calcsec():
+    def calcnewr():
         try:
             anewr_value= float(anewr.get())
         except:
@@ -185,7 +185,7 @@ def gui():
 
 
 #boton secante
-    botonnewr = Button(TOP, text="Calcular raiz", command=calcsec)
+    botonnewr = Button(TOP, text="Calcular raiz", command=calcnewr)
     botonnewr.grid(row=8, column=4)
 
 #resultado de la secante
