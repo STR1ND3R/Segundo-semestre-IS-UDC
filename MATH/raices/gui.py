@@ -22,7 +22,7 @@ def gui():
     b.grid(row=2, column=1)
     bl.grid(row=2, column=0)
 
-#coeficiente b
+#coeficiente c
     c = Entry(TOP, justify=LEFT)
     cl = Label(TOP, text="Coeficiente c:")
     c.grid(row=3, column=1)
@@ -119,7 +119,7 @@ def gui():
     bnewr.grid(row=2, column=4)
     blnewr.grid(row=2, column=3)
 
-#coeficiente b
+#coeficiente c
     cnewr = Entry(TOP, justify=LEFT)
     clnewr = Label(TOP, text="Coeficiente c:")
     cnewr.grid(row=3, column=4)
