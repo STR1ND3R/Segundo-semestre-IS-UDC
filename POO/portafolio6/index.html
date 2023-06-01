@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Ejercicio 1</h1>
+        <form action="">
+            <label for="email">Correo electronico: <input type="email" id="email"></label><br>
+            <label for="pass">Contraseña: <input type="password" id="pass"></label><br>
+            <input type="submit" name="" id="">
+        </form>
+
+    </div>
+    <hr>
+    <div>
+        <h1>Ejercicio 2</h1>
+        <form action="">
+            <fieldset>
+                <p>Datos generales</p>
+                <label for="nombre">Nombre: <input type="text" id="nombre"></label><br>
+                <label for="telefono">Numero de teléfono: <input type="tel" id="telefono"></label><br>
+                <label for="email2">Correo electronico: <input type="email" id="email2"></label><br>
+            </fieldset>
+            <fieldset>
+                <p>Plataforma preferida</p>
+                <label for="pc"><input type="radio" name="plataforma" id="pc">PC</label><br>
+                <label for="ps4"><input type="radio" name="plataforma" id="ps4">PS4</label><br>
+                <label for="ps5"><input type="radio" name="plataforma" id="ps5">PS5</label><br>
+                <label for="switch"><input type="radio" name="plataforma" id="switch">Switch</label><br>
+                <label for="x-boxone"><input type="radio" name="plataforma" id="x-boxone">X-Box One</label><br>
+                <label for="x-boxseriess"><input type="radio" name="plataforma" id="x-boxseriess">X-Box Series S</label><br>
+                <label for="x-boxseriesx"><input type="radio" name="plataforma" id="x-boxseriesx">X-Box Series X</label><br>
+            </fieldset>
+            <fieldset>
+                <p>Categorias favoritas</p>
+                <label for="Accion"><input type="checkbox" id="Accion">Accion</label><br>
+                <label for="Aventura"><input type="checkbox" id="Aventura">Aventura</label><br>
+                <label for="Arcade"><input type="checkbox" id="Arcade">Arcade</label><br>
+                <label for="Deportivo"><input type="checkbox" id="Deportivo">Deportivo</label><br>
+                <label for="Estrategia"><input type="checkbox" id="Estrategia">Estrategia</label><br>
+                <label for="Simulacion"><input type="checkbox" id="Simulacion">Simulacion</label><br>
+                <label for="Musicales"><input type="checkbox" id="Musicales">Musicales</label><br>
+                <label for="RPG"><input type="checkbox" id="RPG">RPG</label><br>
+
+            </fieldset>
+            <input type="submit">
+
+
+        </form>
+    </div>
+    <hr>
+
+    <div>
+        <h1>Ejercicio 3</h1>
+        <form action="">
+            <p>Equipo de futbol</p>
+            <datalist id="equipos">
+                <option value="Monterrey"></option>
+                <option value="América"></option>
+                <option value="Chivas"></option>
+                <option value="Tigres"></option>
+                <option value="Toluca"></option>
+                <option value="Pachuca"></option>
+                <option value="León"></option>
+                <option value="Cruz Azul"></option>
+
+            </datalist>
+            <label for="equipo"><input type="text" id="equipo" autocomplete="on" list="equipos" > </label><br>
+            <input type="submit">
+
+        </form>
+
+
+    </div>
+<hr>
+
+    <div>
+        <style>
+            datalist {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            writing-mode: vertical-lr;
+            width: 200px;
+            }
+
+            option {
+            padding: 0;
+            }
+
+            input[type="range"] {
+            width: 200px;
+            margin: 0;
+            }
+
+        </style>
+        <form action="">
+            <label for="tempB">Choose a comfortable temperature:</label><br />
+            <input type="range" id="tempB" name="temp" list="values" />
+            
+            <datalist id="values">
+              <option value="0" label="muy frio"></option>
+              <option value="25" label="frio"></option>
+              <option value="50" label="templado"></option>
+              <option value="75" label="caliente"></option>
+              <option value="100" label="muy caliente"></option>
+            </datalist>
+        </form>
+    </div>
+    <hr>
+
+    <div>
+        <select name="" id="s1">
+            <option value="Thor" id="Thor">Thor</option>
+            <option value="Kang" id="Kang">Kang</option>
+            <option value="Arcade" id="Arcade">Arcade</option>
+            <option value="She-Hulk" id="She-Hulk">She-Hulk</option>
+            <option value="Beta Ray Bill" id="Beta Ray Bill">Beta Ray Bill</option>
+            <option value="Wong" id="Wong">Wong</option>
+            <option value="Chasm" id="Chasm">Chasm</option>
+            <option value="Emma Frost" id="Emma Frost">Emma Frost</option>
+        </select><br>
+        <button onclick="mover()">Mover</button>
+        <select name="" id="s2">
+        </select><br>
+        <button onclick="mover()">Mover</button>
+
+
+    </div>
+</body>
+</html>
