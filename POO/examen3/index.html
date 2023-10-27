@@ -56,9 +56,8 @@
                 let e = document.createElement(tag)
                 e.setAttribute('onmouseover', 'cambiarColor(this)')
                 e.setAttribute('onmouseout', 'cambiarColor2(this)')
-                e.setAttribute('onclick', 'seleccionar(this)')
                 e.innerText = xd('texto1')
-                document.getElementById('div1').childNodes[element.index] = e
+                document.getElementById('div1').replaceChild(e, element)
                }
             });
         }
@@ -104,19 +103,15 @@
     <script>
         function subir(){
             let lst = document.getElementById('lista3')
-            let lste = lst.options[lst.selectedIndex]
-    
-            let x = lst.options[lst.selectedIndex-1]
-            lst.options[lst.selectedIndex-1] = lste
+            
+            let x = lst.options.item(lst.selectedIndex-1)
+
+            lst.options[lst.selectedIndex-1] = lst.options.item(lst.selectedIndex)
             lst.options[lst.selectedIndex] = x
+
         }
         function bajar(){
-            let lst = document.getElementById('lista3')
-            let lste = lst.options[lst.selectedIndex]
-    
-            let x = lst.options[lst.selectedIndex+1]
-            lst.options[lst.selectedIndex+1] = lste
-            lst.options[lst.selectedIndex] = x
+            
         }
     </script>
 
